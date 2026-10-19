@@ -1,5 +1,13 @@
 # owidapi (development version)
 
+# owidapi 0.1.3
+
+- The package moved from the `tidy-intelligence` to the `econdataverse` GitHub
+  organization. All package URLs, including the user agent sent with API
+  requests, now point to <https://github.com/econdataverse/r-owidapi>.
+
+# owidapi 0.1.2
+
 - Fixed `owid_get_catalog()` returning only the first 1000 charts. Datasette caps
   the `_size=max` parameter at its `max_returned_rows` setting, so the catalog was
   silently truncated and `owid_search()` searched only a fraction of it. The
