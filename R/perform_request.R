@@ -5,7 +5,7 @@ perform_request <- function(req, context) {
     {
       resp <- req |>
         req_user_agent(
-          "owidapi R package (https://github.com/tidy-intelligence/r-owidapi)"
+          "owidapi R package (https://github.com/econdataverse/r-owidapi)"
         ) |>
         req_perform()
       resp

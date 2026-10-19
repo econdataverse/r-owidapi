@@ -11,14 +11,19 @@ Retrieve data from the Our World in Data (OWID) Chart API \url{https://docs.owid
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/tidy-intelligence/r-owidapi}
-  \item \url{https://tidy-intelligence.github.io/r-owidapi/}
-  \item Report bugs at \url{https://github.com/tidy-intelligence/r-owidapi/issues}
+  \item \url{https://github.com/econdataverse/r-owidapi}
+  \item \url{https://econdataverse.github.io/r-owidapi/}
+  \item Report bugs at \url{https://github.com/econdataverse/r-owidapi/issues}
 }
 
 }
 \author{
 \strong{Maintainer}: Christoph Scheuch \email{christoph@tidy-intelligence.com} (\href{https://orcid.org/0009-0004-0423-6819}{ORCID}) [copyright holder]
+
+Authors:
+\itemize{
+  \item Christoph Scheuch \email{christoph@tidy-intelligence.com} (\href{https://orcid.org/0009-0004-0423-6819}{ORCID}) [copyright holder]
+}
 
 }
 \keyword{internal}
