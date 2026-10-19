@@ -9,13 +9,18 @@ disease, hunger, climate change, war, existential risks, and inequality.
 
 Useful links:
 
-- <https://github.com/tidy-intelligence/r-owidapi>
+- <https://github.com/econdataverse/r-owidapi>
 
-- <https://tidy-intelligence.github.io/r-owidapi/>
+- <https://econdataverse.github.io/r-owidapi/>
 
-- Report bugs at <https://github.com/tidy-intelligence/r-owidapi/issues>
+- Report bugs at <https://github.com/econdataverse/r-owidapi/issues>
 
 ## Author
 
 **Maintainer**: Christoph Scheuch <christoph@tidy-intelligence.com>
 ([ORCID](https://orcid.org/0009-0004-0423-6819)) \[copyright holder\]
+
+Authors:
+
+- Christoph Scheuch <christoph@tidy-intelligence.com>
+  ([ORCID](https://orcid.org/0009-0004-0423-6819)) \[copyright holder\]

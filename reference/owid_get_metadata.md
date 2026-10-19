@@ -73,7 +73,7 @@ owid_get_metadata("life-expectancy")
 #> [1] "Period life expectancy is the number of years the average person born in a certain year would live if they experienced the same chances of dying at each age as people did that year."
 #> 
 #> $columns$`Period life expectancy at birth`$descriptionKey
-#> [1] "- Across the world, people are living longer. In 1900, the global average life expectancy was 32 years. By 2023, this had more than doubled to 73 years.\n- Countries around the world made big improvements, and life expectancy more than doubled in every region. This wasn’t just due to falling child mortality; people started living longer at all ages.\n- Even after World War II, there have been large drops in life expectancy, such as during the Great Leap Forward famine in China, the HIV/AIDS epidemic in sub-Saharan Africa, the Rwandan genocide, or the COVID-19 pandemic.\n- Period life expectancy is an indicator that summarizes death rates across all age groups in one particular year. It shows how long the average baby born in that year would be expected to live if they experienced the same chances of dying at each age as people did in that year.\n- This chart shows long-run estimates of life expectancy compiled by our team from several data sources. Before 1950, for country-level data, we rely on the [Human Mortality Database (2025)](https://www.mortality.org/Data/ZippedDataFiles) combined with [Zijdeman (2015)](https://clio-infra.eu/Indicators/LifeExpectancyatBirthTotal.html). For regional data, we use [Riley (2005)](https://doi.org/10.1111/j.1728-4457.2005.00083.x). From 1950 onward, we use the [United Nations World Population Prospects (2024)](https://population.un.org/wpp/downloads).\n- Detailed information on the source of each data point can be found on [this page](https://docs.google.com/spreadsheets/d/1LnrU1V3p2wq7sAPY4AHRdH1urol3cKev7prEvlLfSU4/edit?gid=0#gid=0)."
+#> [1] "- Across the world, people are living longer. In 1900, the global average life expectancy was 32 years. By 2023, this had more than doubled to 73 years.\n- Countries around the world made big improvements, and life expectancy more than doubled in every region. This wasn’t just due to falling child mortality; people started living longer at all ages.\n- Even after World War II, there have been large drops in life expectancy, such as during the Great Leap Forward famine in China, the HIV/AIDS epidemic in sub-Saharan Africa, the Rwandan genocide, or the COVID-19 pandemic.\n- The UN counts crisis deaths in the year they happened, which can produce a sharp one-year fall. The Central African Republic reads 14.7 years in 2009 and 18.8 in 2022, against about 50 either side — the UN converted mortality surveys compiled by [Gang et al. (2023)](https://doi.org/10.1186/s13031-023-00514-z) into excess deaths for the years each survey was run, so these appear as isolated dips rather than the sustained gap the surveys point to.\n- Period life expectancy is an indicator that summarizes death rates across all age groups in one particular year. It shows how long the average baby born in that year would be expected to live if they experienced the same chances of dying at each age as people did in that year.\n- This chart shows long-run estimates of life expectancy compiled by our team from several data sources. Before 1950, for country-level data, we rely on the [Human Mortality Database (2025)](https://www.mortality.org/Data/ZippedDataFiles) combined with [Zijdeman (2015)](https://clio-infra.eu/Indicators/LifeExpectancyatBirthTotal.html). For regional data, we use [Riley (2005)](https://doi.org/10.1111/j.1728-4457.2005.00083.x). From 1950 onward, we use the [United Nations World Population Prospects (2024)](https://population.un.org/wpp/downloads).\n- Detailed information on the source of each data point can be found on [this page](https://docs.google.com/spreadsheets/d/1LnrU1V3p2wq7sAPY4AHRdH1urol3cKev7prEvlLfSU4/edit?gid=0#gid=0)."
 #> 
 #> $columns$`Period life expectancy at birth`$descriptionProcessing
 #> [1] "This chart combines data from several sources. For country-level data before 1950, we use the Human Mortality Database (2025) data and Zijdeman et al. (2015). For country-years where these sources overlap, we use the Human Mortality Database.\n\nFor regional data, before 1950, we use Riley's (2005) estimates.\n\nFrom 1950 onwards, we use the United Nations World Population Prospects (2024) for both country-level and regional data.\n\nDetailed information on the source of each data point can be found on [this page](https://docs.google.com/spreadsheets/d/1LnrU1V3p2wq7sAPY4AHRdH1urol3cKev7prEvlLfSU4/edit?gid=0#gid=0)."
@@ -106,7 +106,7 @@ owid_get_metadata("life-expectancy")
 #> [1] "Riley (2005); Zijdeman et al. (2015); HMD (2025); UN WPP (2024) – with major processing by Our World in Data"
 #> 
 #> $columns$`Period life expectancy at birth`$citationLong
-#> [1] "Riley (2005); Zijdeman et al. (2015); HMD (2025); UN WPP (2024) – with major processing by Our World in Data. “Life expectancy – Riley; Zijdeman et al.; HMD; UN WPP – Long-run data” [dataset]. Human Mortality Database, “Human Mortality Database”; United Nations, “World Population Prospects”; United Nations, “World Population Prospects - Interim Update”; Zijdeman et al., “Life Expectancy at birth v2”; James C. Riley, “Estimates of Regional and Global Life Expectancy, 1800-2001” [original data]."
+#> [1] "Riley (2005); Zijdeman et al. (2015); HMD (2025); UN WPP (2024) – with major processing by Our World in Data. “Life expectancy – Riley; Zijdeman et al.; HMD; UN WPP – Long-run data” [dataset]. Human Mortality Database, “Human Mortality Database”; United Nations, “World Population Prospects”; United Nations, “World Population Prospects – Interim Update”; Zijdeman et al., “Life Expectancy at birth v2”; James C. Riley, “Estimates of Regional and Global Life Expectancy, 1800–2001” [original data]."
 #> 
 #> $columns$`Period life expectancy at birth`$fullMetadata
 #> [1] "https://api.ourworldindata.org/v1/indicators/1118466.metadata.json"
@@ -114,7 +114,7 @@ owid_get_metadata("life-expectancy")
 #> 
 #> 
 #> $dateDownloaded
-#> [1] "2026-07-28"
+#> [1] "2026-10-19"
 #> 
 
 # Download metadata using an url
@@ -220,10 +220,10 @@ owid_get_metadata(
 #> [1] "2023-01-01"
 #> 
 #> $columns$`World region according to OWID`$citationShort
-#> [1] "Our World in Data – processed by Our World in Data"
+#> [1] "Our World in Data"
 #> 
 #> $columns$`World region according to OWID`$citationLong
-#> [1] "Our World in Data – processed by Our World in Data. “World region according to OWID” [dataset]. Our World in Data, “Regions” [original data]."
+#> [1] "Our World in Data. “World region according to OWID” [dataset]. Our World in Data, “Regions” [original data]."
 #> 
 #> $columns$`World region according to OWID`$fullMetadata
 #> [1] "https://api.ourworldindata.org/v1/indicators/900801.metadata.json"
@@ -231,7 +231,7 @@ owid_get_metadata(
 #> 
 #> 
 #> $dateDownloaded
-#> [1] "2026-07-28"
+#> [1] "2026-10-19"
 #> 
 # }
 ```

@@ -26,12 +26,12 @@ install.packages("owidapi")
 ```
 
 You can install the development version of `owidapi` from
-[GitHub](https://github.com/tidy-intelligence/r-owidapi) with:
+[GitHub](https://github.com/econdataverse/r-owidapi) with:
 
 ``` r
 
 # install.packages("pak")
-pak::pak("tidy-intelligence/r-owidapi")
+pak::pak("econdataverse/r-owidapi")
 ```
 
 ## Usage
@@ -201,10 +201,10 @@ str(metadata)
 #>   .. ..$ owidVariableId  : int 900801
 #>   .. ..$ shortName       : chr "owid_region"
 #>   .. ..$ lastUpdated     : chr "2023-01-01"
-#>   .. ..$ citationShort   : chr "Our World in Data – processed by Our World in Data"
-#>   .. ..$ citationLong    : chr "Our World in Data – processed by Our World in Data. “World region according to OWID” [dataset]. Our World in Da"| __truncated__
+#>   .. ..$ citationShort   : chr "Our World in Data"
+#>   .. ..$ citationLong    : chr "Our World in Data. “World region according to OWID” [dataset]. Our World in Data, “Regions” [original data]."
 #>   .. ..$ fullMetadata    : chr "https://api.ourworldindata.org/v1/indicators/900801.metadata.json"
-#>  $ dateDownloaded: chr "2026-07-27"
+#>  $ dateDownloaded: chr "2026-10-19"
 ```
 
 The only difference is in the `originalChartUrl` value:
@@ -222,20 +222,20 @@ If you want to fetch the full catalog of available charts:
 
 catalog <- owid_get_catalog()
 catalog
-#> # A tibble: 4,458 × 17
+#> # A tibble: 4,276 × 17
 #>    rowid    id config_id        is_inheritance_enabled force_datapage created_at
 #>    <int> <int> <chr>            <lgl>                  <lgl>          <date>    
-#>  1   106    20 0191b6c7-3629-7… FALSE                  FALSE          2015-07-02
-#>  2   401    27 0191b6c7-3633-7… FALSE                  FALSE          2015-07-07
-#>  3   211    31 0191b6c7-3635-7… FALSE                  FALSE          2015-07-09
-#>  4   104    44 0191b6c7-3638-7… FALSE                  FALSE          2015-07-18
-#>  5   604    46 0191b6c7-363d-7… FALSE                  FALSE          2015-07-20
-#>  6   546    51 0191b6c7-3645-7… FALSE                  FALSE          2015-07-21
-#>  7   602    52 0191b6c7-3647-7… FALSE                  FALSE          2015-07-22
-#>  8   212    56 0191b6c7-364c-7… FALSE                  FALSE          2015-07-24
-#>  9   511    64 0191b6c7-364e-7… FALSE                  FALSE          2015-07-31
-#> 10   605    73 0191b6c7-3653-7… FALSE                  FALSE          2015-08-05
-#> # ℹ 4,448 more rows
+#>  1    51    20 0191b6c7-3629-7… FALSE                  FALSE          2015-07-02
+#>  2   285    27 0191b6c7-3633-7… FALSE                  FALSE          2015-07-07
+#>  3   131    31 0191b6c7-3635-7… FALSE                  FALSE          2015-07-09
+#>  4   745    44 0191b6c7-3638-7… FALSE                  FALSE          2015-07-18
+#>  5   437    46 0191b6c7-363d-7… FALSE                  FALSE          2015-07-20
+#>  6   397    51 0191b6c7-3645-7… FALSE                  FALSE          2015-07-21
+#>  7   424    52 0191b6c7-3647-7… FALSE                  FALSE          2015-07-22
+#>  8   132    56 0191b6c7-364c-7… FALSE                  FALSE          2015-07-24
+#>  9   370    64 0191b6c7-364e-7… FALSE                  FALSE          2015-07-31
+#> 10   438    73 0191b6c7-3653-7… FALSE                  FALSE          2015-08-05
+#> # ℹ 4,266 more rows
 #> # ℹ 11 more variables: updated_at <date>, last_edited_at <date>,
 #> #   published_at <date>, config <chr>, slug <chr>, type <chr>, title <chr>,
 #> #   subtitle <chr>, note <chr>, title_plus_variant <chr>, is_published <lgl>
@@ -246,20 +246,20 @@ To search for keywords in the catalog, you can use the following helper:
 ``` r
 
 owid_search(catalog, c("climate", "carbon"))
-#> # A tibble: 205 × 17
+#> # A tibble: 199 × 17
 #>    rowid    id config_id        is_inheritance_enabled force_datapage created_at
 #>    <int> <int> <chr>            <lgl>                  <lgl>          <date>    
-#>  1   501   488 0191b6c7-37aa-7… TRUE                   FALSE          2017-04-07
-#>  2   499   530 0191b6c7-37ce-7… TRUE                   FALSE          2017-04-19
-#>  3   658   784 0191b6c7-38c5-7… FALSE                  FALSE          2017-07-22
-#>  4   163  1108 0191b6c7-3a46-7… FALSE                  FALSE          2017-09-08
-#>  5   165  1129 0191b6c7-3a55-7… FALSE                  FALSE          2017-09-10
-#>  6   711  1277 0191b6c7-3aeb-7… FALSE                  FALSE          2017-10-05
-#>  7    76  1362 0191b6c7-3b27-7… FALSE                  FALSE          2017-10-14
-#>  8   161  1366 0191b6c7-3b2a-7… FALSE                  FALSE          2017-10-15
-#>  9   448  1421 0191b6c7-3b5f-7… FALSE                  FALSE          2017-10-23
-#> 10  2014  2245 0191b6c7-3e77-7… FALSE                  FALSE          2018-02-20
-#> # ℹ 195 more rows
+#>  1   361   488 0191b6c7-37aa-7… TRUE                   FALSE          2017-04-07
+#>  2   362   530 0191b6c7-37ce-7… TRUE                   FALSE          2017-04-19
+#>  3   487   784 0191b6c7-38c5-7… FALSE                  FALSE          2017-07-22
+#>  4   728  1108 0191b6c7-3a46-7… FALSE                  FALSE          2017-09-08
+#>  5    90  1129 0191b6c7-3a55-7… FALSE                  FALSE          2017-09-10
+#>  6   534  1277 0191b6c7-3aeb-7… FALSE                  FALSE          2017-10-05
+#>  7   600  1362 0191b6c7-3b27-7… FALSE                  FALSE          2017-10-14
+#>  8   731  1366 0191b6c7-3b2a-7… FALSE                  FALSE          2017-10-15
+#>  9   604  1421 0191b6c7-3b5f-7… FALSE                  FALSE          2017-10-23
+#> 10  1632  2245 0191b6c7-3e77-7… FALSE                  FALSE          2018-02-20
+#> # ℹ 189 more rows
 #> # ℹ 11 more variables: updated_at <date>, last_edited_at <date>,
 #> #   published_at <date>, config <chr>, slug <chr>, type <chr>, title <chr>,
 #> #   subtitle <chr>, note <chr>, title_plus_variant <chr>, is_published <lgl>
@@ -275,9 +275,9 @@ owid_embed(url)
 ```
 
 If you want to render embedded OWID charts in a Shiny app, you can use
-[`owid_output()`](https://tidy-intelligence.github.io/r-owidapi/reference/owid_output.md)
+[`owid_output()`](https://econdataverse.github.io/r-owidapi/reference/owid_output.md)
 and
-[`owid_server()`](https://tidy-intelligence.github.io/r-owidapi/reference/owid_output.md):
+[`owid_server()`](https://econdataverse.github.io/r-owidapi/reference/owid_output.md):
 
 ``` r
 

@@ -22,7 +22,7 @@
 
     <a class="navbar-brand me-2" href="index.html">owidapi</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.2.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.3</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,7 +38,7 @@
 <li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="search.json">
 </form></li>
-<li class="nav-item"><a class="external-link nav-link" href="https://github.com/tidy-intelligence/r-owidapi/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://github.com/econdataverse/r-owidapi/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
       </ul>
 </div>
 
@@ -62,17 +62,17 @@
 <p>You can install <code>owidapi</code> from <a href="https://cran.r-project.org/package=owidapi" class="external-link">CRAN</a> via:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"owidapi"</span><span class="op">)</span></span></code></pre></div>
-<p>You can install the development version of <code>owidapi</code> from <a href="https://github.com/tidy-intelligence/r-owidapi" class="external-link">GitHub</a> with:</p>
+<p>You can install the development version of <code>owidapi</code> from <a href="https://github.com/econdataverse/r-owidapi" class="external-link">GitHub</a> with:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("pak")</span></span>
-<span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"tidy-intelligence/r-owidapi"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"econdataverse/r-owidapi"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
 </h2>
 <p>Load the package:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/tidy-intelligence/r-owidapi" class="external-link">owidapi</a></span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/econdataverse/r-owidapi" class="external-link">owidapi</a></span><span class="op">)</span></span></code></pre></div>
 <p>Download the full life expectancy dataset:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/owid_get.html">owid_get</a></span><span class="op">(</span><span class="st">"life-expectancy"</span><span class="op">)</span></span>
@@ -207,10 +207,10 @@
 <span><span class="co">#&gt;   .. ..$ owidVariableId  : int 900801</span></span>
 <span><span class="co">#&gt;   .. ..$ shortName       : chr "owid_region"</span></span>
 <span><span class="co">#&gt;   .. ..$ lastUpdated     : chr "2023-01-01"</span></span>
-<span><span class="co">#&gt;   .. ..$ citationShort   : chr "Our World in Data – processed by Our World in Data"</span></span>
-<span><span class="co">#&gt;   .. ..$ citationLong    : chr "Our World in Data – processed by Our World in Data. “World region according to OWID” [dataset]. Our World in Da"| __truncated__</span></span>
+<span><span class="co">#&gt;   .. ..$ citationShort   : chr "Our World in Data"</span></span>
+<span><span class="co">#&gt;   .. ..$ citationLong    : chr "Our World in Data. “World region according to OWID” [dataset]. Our World in Data, “Regions” [original data]."</span></span>
 <span><span class="co">#&gt;   .. ..$ fullMetadata    : chr "https://api.ourworldindata.org/v1/indicators/900801.metadata.json"</span></span>
-<span><span class="co">#&gt;  $ dateDownloaded: chr "2026-07-27"</span></span></code></pre></div>
+<span><span class="co">#&gt;  $ dateDownloaded: chr "2026-10-19"</span></span></code></pre></div>
 <p>The only difference is in the <code>originalChartUrl</code> value:</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/all.equal.html" class="external-link">all.equal</a></span><span class="op">(</span><span class="va">metadata</span>, <span class="va">metadata_url</span><span class="op">)</span></span>
@@ -220,40 +220,40 @@
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">catalog</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/owid_get_catalog.html">owid_get_catalog</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="va">catalog</span></span>
-<span><span class="co">#&gt; # A tibble: 4,458 × 17</span></span>
+<span><span class="co">#&gt; # A tibble: 4,276 × 17</span></span>
 <span><span class="co">#&gt;    rowid    id config_id        is_inheritance_enabled force_datapage created_at</span></span>
 <span><span class="co">#&gt;    &lt;int&gt; &lt;int&gt; &lt;chr&gt;            &lt;lgl&gt;                  &lt;lgl&gt;          &lt;date&gt;    </span></span>
-<span><span class="co">#&gt;  1   106    20 0191b6c7-3629-7… FALSE                  FALSE          2015-07-02</span></span>
-<span><span class="co">#&gt;  2   401    27 0191b6c7-3633-7… FALSE                  FALSE          2015-07-07</span></span>
-<span><span class="co">#&gt;  3   211    31 0191b6c7-3635-7… FALSE                  FALSE          2015-07-09</span></span>
-<span><span class="co">#&gt;  4   104    44 0191b6c7-3638-7… FALSE                  FALSE          2015-07-18</span></span>
-<span><span class="co">#&gt;  5   604    46 0191b6c7-363d-7… FALSE                  FALSE          2015-07-20</span></span>
-<span><span class="co">#&gt;  6   546    51 0191b6c7-3645-7… FALSE                  FALSE          2015-07-21</span></span>
-<span><span class="co">#&gt;  7   602    52 0191b6c7-3647-7… FALSE                  FALSE          2015-07-22</span></span>
-<span><span class="co">#&gt;  8   212    56 0191b6c7-364c-7… FALSE                  FALSE          2015-07-24</span></span>
-<span><span class="co">#&gt;  9   511    64 0191b6c7-364e-7… FALSE                  FALSE          2015-07-31</span></span>
-<span><span class="co">#&gt; 10   605    73 0191b6c7-3653-7… FALSE                  FALSE          2015-08-05</span></span>
-<span><span class="co">#&gt; # ℹ 4,448 more rows</span></span>
+<span><span class="co">#&gt;  1    51    20 0191b6c7-3629-7… FALSE                  FALSE          2015-07-02</span></span>
+<span><span class="co">#&gt;  2   285    27 0191b6c7-3633-7… FALSE                  FALSE          2015-07-07</span></span>
+<span><span class="co">#&gt;  3   131    31 0191b6c7-3635-7… FALSE                  FALSE          2015-07-09</span></span>
+<span><span class="co">#&gt;  4   745    44 0191b6c7-3638-7… FALSE                  FALSE          2015-07-18</span></span>
+<span><span class="co">#&gt;  5   437    46 0191b6c7-363d-7… FALSE                  FALSE          2015-07-20</span></span>
+<span><span class="co">#&gt;  6   397    51 0191b6c7-3645-7… FALSE                  FALSE          2015-07-21</span></span>
+<span><span class="co">#&gt;  7   424    52 0191b6c7-3647-7… FALSE                  FALSE          2015-07-22</span></span>
+<span><span class="co">#&gt;  8   132    56 0191b6c7-364c-7… FALSE                  FALSE          2015-07-24</span></span>
+<span><span class="co">#&gt;  9   370    64 0191b6c7-364e-7… FALSE                  FALSE          2015-07-31</span></span>
+<span><span class="co">#&gt; 10   438    73 0191b6c7-3653-7… FALSE                  FALSE          2015-08-05</span></span>
+<span><span class="co">#&gt; # ℹ 4,266 more rows</span></span>
 <span><span class="co">#&gt; # ℹ 11 more variables: updated_at &lt;date&gt;, last_edited_at &lt;date&gt;,</span></span>
 <span><span class="co">#&gt; #   published_at &lt;date&gt;, config &lt;chr&gt;, slug &lt;chr&gt;, type &lt;chr&gt;, title &lt;chr&gt;,</span></span>
 <span><span class="co">#&gt; #   subtitle &lt;chr&gt;, note &lt;chr&gt;, title_plus_variant &lt;chr&gt;, is_published &lt;lgl&gt;</span></span></code></pre></div>
 <p>To search for keywords in the catalog, you can use the following helper:</p>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/owid_search.html">owid_search</a></span><span class="op">(</span><span class="va">catalog</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"climate"</span>, <span class="st">"carbon"</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 205 × 17</span></span>
+<span><span class="co">#&gt; # A tibble: 199 × 17</span></span>
 <span><span class="co">#&gt;    rowid    id config_id        is_inheritance_enabled force_datapage created_at</span></span>
 <span><span class="co">#&gt;    &lt;int&gt; &lt;int&gt; &lt;chr&gt;            &lt;lgl&gt;                  &lt;lgl&gt;          &lt;date&gt;    </span></span>
-<span><span class="co">#&gt;  1   501   488 0191b6c7-37aa-7… TRUE                   FALSE          2017-04-07</span></span>
-<span><span class="co">#&gt;  2   499   530 0191b6c7-37ce-7… TRUE                   FALSE          2017-04-19</span></span>
-<span><span class="co">#&gt;  3   658   784 0191b6c7-38c5-7… FALSE                  FALSE          2017-07-22</span></span>
-<span><span class="co">#&gt;  4   163  1108 0191b6c7-3a46-7… FALSE                  FALSE          2017-09-08</span></span>
-<span><span class="co">#&gt;  5   165  1129 0191b6c7-3a55-7… FALSE                  FALSE          2017-09-10</span></span>
-<span><span class="co">#&gt;  6   711  1277 0191b6c7-3aeb-7… FALSE                  FALSE          2017-10-05</span></span>
-<span><span class="co">#&gt;  7    76  1362 0191b6c7-3b27-7… FALSE                  FALSE          2017-10-14</span></span>
-<span><span class="co">#&gt;  8   161  1366 0191b6c7-3b2a-7… FALSE                  FALSE          2017-10-15</span></span>
-<span><span class="co">#&gt;  9   448  1421 0191b6c7-3b5f-7… FALSE                  FALSE          2017-10-23</span></span>
-<span><span class="co">#&gt; 10  2014  2245 0191b6c7-3e77-7… FALSE                  FALSE          2018-02-20</span></span>
-<span><span class="co">#&gt; # ℹ 195 more rows</span></span>
+<span><span class="co">#&gt;  1   361   488 0191b6c7-37aa-7… TRUE                   FALSE          2017-04-07</span></span>
+<span><span class="co">#&gt;  2   362   530 0191b6c7-37ce-7… TRUE                   FALSE          2017-04-19</span></span>
+<span><span class="co">#&gt;  3   487   784 0191b6c7-38c5-7… FALSE                  FALSE          2017-07-22</span></span>
+<span><span class="co">#&gt;  4   728  1108 0191b6c7-3a46-7… FALSE                  FALSE          2017-09-08</span></span>
+<span><span class="co">#&gt;  5    90  1129 0191b6c7-3a55-7… FALSE                  FALSE          2017-09-10</span></span>
+<span><span class="co">#&gt;  6   534  1277 0191b6c7-3aeb-7… FALSE                  FALSE          2017-10-05</span></span>
+<span><span class="co">#&gt;  7   600  1362 0191b6c7-3b27-7… FALSE                  FALSE          2017-10-14</span></span>
+<span><span class="co">#&gt;  8   731  1366 0191b6c7-3b2a-7… FALSE                  FALSE          2017-10-15</span></span>
+<span><span class="co">#&gt;  9   604  1421 0191b6c7-3b5f-7… FALSE                  FALSE          2017-10-23</span></span>
+<span><span class="co">#&gt; 10  1632  2245 0191b6c7-3e77-7… FALSE                  FALSE          2018-02-20</span></span>
+<span><span class="co">#&gt; # ℹ 189 more rows</span></span>
 <span><span class="co">#&gt; # ℹ 11 more variables: updated_at &lt;date&gt;, last_edited_at &lt;date&gt;,</span></span>
 <span><span class="co">#&gt; #   published_at &lt;date&gt;, config &lt;chr&gt;, slug &lt;chr&gt;, type &lt;chr&gt;, title &lt;chr&gt;,</span></span>
 <span><span class="co">#&gt; #   subtitle &lt;chr&gt;, note &lt;chr&gt;, title_plus_variant &lt;chr&gt;, is_published &lt;lgl&gt;</span></span></code></pre></div>
@@ -288,8 +288,8 @@
 <h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
 <li><a href="https://cloud.r-project.org/package=owidapi" class="external-link">View on CRAN</a></li>
-<li><a href="https://github.com/tidy-intelligence/r-owidapi/" class="external-link">Browse source code</a></li>
-<li><a href="https://github.com/tidy-intelligence/r-owidapi/issues" class="external-link">Report a bug</a></li>
+<li><a href="https://github.com/econdataverse/r-owidapi/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/econdataverse/r-owidapi/issues" class="external-link">Report a bug</a></li>
 </ul>
 </div>
 
@@ -321,7 +321,7 @@
 <ul class="list-unstyled">
 <li><a href="https://cran.r-project.org/package=owidapi" class="external-link"><img src="https://www.r-pkg.org/badges/version/owidapi" alt="CRAN status"></a></li>
 <li><a href="https://cran.r-project.org/package=owidapi" class="external-link"><img src="https://cranlogs.r-pkg.org/badges/owidapi" alt="CRAN downloads"></a></li>
-<li><a href="https://app.codecov.io/gh/tidy-intelligence/r-owidapi" class="external-link"><img src="https://codecov.io/gh/tidy-intelligence/r-owidapi/graph/badge.svg" alt="Codecov test coverage"></a></li>
+<li><a href="https://app.codecov.io/gh/econdataverse/r-owidapi" class="external-link"><img src="https://codecov.io/gh/econdataverse/r-owidapi/graph/badge.svg" alt="Codecov test coverage"></a></li>
 </ul>
 </div>
 
